@@ -1,0 +1,231 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: aliceblue;
+}
+* {
+  font-family: "Orbitron", sans-serif;
+}
+.calculator-container {
+  width: 100%;
+  position: relative;
+}
+.calculator {
+  width: 300px;
+  position: relative;
+  background-color: hsl(250deg, 14%, 34%);
+  height: 500px;
+  margin: 2rem auto;
+  border-radius: 0.5rem 0.5rem 3rem 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #737373;
+  box-shadow: 7px 10px 34px 1px rgb(0 0 0 / 68%),
+    inset -1px -6px 12px 0.1px #67677a;
+  padding: 5px;
+}
+
+#buttons {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 300px;
+  height: auto;
+  align-content: center;
+  align-items: flex-end;
+}
+.container-button {
+  width: fit-content;
+  height: fit-content;
+  margin: 0;
+}
+.container-button > div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 0.5rem;
+}
+.container-button > div :nth-child(1) {
+  color: #ffd19a;
+}
+.container-button > div :nth-child(2) {
+  color: #ff6161;
+}
+button {
+  color: #fff;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  background-color: #3a3a3a;
+  margin: 0 4px 10px 8px;
+  height: 24px;
+  width: 40px;
+  box-shadow: 0px 3px 0px 0px #222121, inset -1px -3px 10px 1px #515151;
+}
+
+button.button-medio {
+  width: 35px;
+  height: 25px;
+  font-size: 8px;
+  margin: 0 4px 10px 4px;
+}
+.button-group {
+  display: grid;
+  width: 90px;
+  height: 60px;
+  margin: 0px 10px 20px 10px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.button-group > button {
+  margin: 0 4px 10px 2px;
+}
+.button-group.button {
+  margin: 0 4px 6px 2px;
+}
+
+button,
+button:hover,
+button:active,
+button:visited {
+  text-decoration: none !important;
+  outline: none !important;
+}
+.button-move {
+  display: grid;
+  width: 75px;
+  height: 56px;
+  color: #fff;
+  border-radius: 8px;
+  border: none;
+  background-color: #3a3a3a;
+  margin: 0px 0px 13px 0px;
+  box-shadow: 0px 3px 0px 0px #222121, inset -1px -3px 10px 1px #515151;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.button-move > button {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+button[value="shift"] {
+  color: #ffd19a;
+}
+button[value="alpha"] {
+  color: #ff6161;
+}
+button[value="del"],
+button[value="ac"] {
+  background-color: #963939;
+  box-shadow: 0px 3px 0px 0px #670000, inset 0px -4px 17px 0px #9e0d0d;
+}
+button:active,
+button[value="del"]:active,
+button[value="ac"]:active {
+  transform: translate(0px, 3px);
+  box-shadow: none;
+}
+.screen {
+  width: 85%;
+  height: 65px;
+  margin: 1rem auto;
+  border: 2px solid #b4b39d;
+  border-radius: 6px;
+  background-color: #c3c2ab;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  overflow-x: hidden;
+    display: block;
+}
+.screen .ecuation{
+  min-width: 100%;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding: 5px 1rem;
+  box-sizing: border-box;
+}
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.answer p {
+  font-size: 1.6rem;
+  white-space: nowrap;
+}
+
+.shift {
+  position: absolute;
+  left: 7px;
+  top: 0px;
+  font-size: 14px;
+  width: 15px;
+  height: 19px;
+  text-align: center;
+  display: none;
+}
+
+.alpha {
+  position: absolute;
+  left: 23px;
+  top: 2px;
+  font-size: 13px;
+  text-align: center;
+  display: none;
+  background: black;
+  color: #c3c2ab;
+  width: 14px;
+  height: 17px;
+}
+.alpha::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 17px;
+  width: 3px;
+  background: #c3c2ab;
+}
+
+.alpha::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 17px;
+  background: #c3c2ab;
+  top: 0;
+}
+
+#history p {
+  white-space: nowrap;
+}
+
+footer{
+  padding:.5rem;
+}
+footer{
+  padding:.5rem;
+}
+footer p{
+  text-align: center;
+  font-size: 0.8rem;
+  color: #434343;
+}
+
+footer p a{
+  color: #434343;
+}

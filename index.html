@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,minimum-scale=1.0,maximum-scale=1.0"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <main>
+      <div class="calculator-container">
+        <div class="calculator">
+          <div class="screen">
+            <div class="shift">🆂</div>
+            <div class="alpha">🅰</div>
+            <div class="ecuation">
+              <div id="history">
+                <p>0</p>
+              </div>
+              <div class="answer"><p></p></div>
+            </div>
+          </div>
+          <div id="buttons">
+            <div class="button-group">
+              <div class="container-button">
+                <button class="button-medio button" value="shift">shift</button>
+              </div>
+              <div class="container-button">
+                <button class="button-medio button" value="alpha">alpha</button>
+              </div>
+              <div class="container-button">
+                <div><span>𝓧ǃ</span></div>
+                <button class="button-medio button" value="⁻¹">x⁻¹</button>
+              </div>
+              <div class="container-button">
+                <div><span>nPr</span></div>
+                <button class="button-medio button" value="nCr">nCr</button>
+              </div>
+            </div>
+            <div class="button-move">
+              <div></div>
+              <button id="top">▲</button>
+              <div></div>
+              <button id="left">◄</button>
+              <div></div>
+              <button id="right">►</button>
+              <div></div>
+              <button id="buttom">▼</button>
+              <div></div>
+            </div>
+            <div class="button-group">
+              <div class="container-button">
+                <button class="button-medio button" value="mode">mode</button>
+              </div>
+              <div class="container-button">
+                <button class="button-medio button" value="on">on</button>
+              </div>
+              <div class="container-button">
+                <div><span>Rec(</span><span>:</span></div>
+                <button class="button-medio button" value="pol">pol(</button>
+              </div>
+              <div class="container-button">
+                <div><span>∛</span></div>
+                <button class="button-medio button" value="³">x³</button>
+              </div>
+            </div>
+            <div class="container-button">
+              <div><span>D/c</span></div>
+              <button class="button-medio button" value="ab/c">ab/c</button>
+            </div>
+            <div class="container-button">
+              <button class="button-medio button" value="√">√</button>
+            </div>
+            <div class="container-button">
+              <button class="button-medio button" value="²">x²</button>
+            </div>
+            <div class="container-button">
+              <div><span>x√</span></div>
+              <button class="button-medio button" value="ᶺ">^</button>
+            </div>
+            <div class="container-button">
+              <div><span>₁₀</span></div>
+              <button class="button-medio button" value="log">log</button>
+            </div>
+            <div class="container-button">
+              <div><span>eX</span><span>𝒆</span></div>
+              <button class="button-medio button" value="In">In</button>
+            </div>
+            <div class="container-button">
+              <div><span></span><span>A</span></div>
+              <button class="button-medio button" value="(-)">(-)</button>
+            </div>
+            <div class="container-button">
+              <div><span>←</span><span>B</span></div>
+              <button class="button-medio button" value="°">.,,,</button>
+            </div>
+            <div class="container-button">
+              <div><span></span><span>C</span></div>
+              <button class="button-medio button" value="hyp">hyp</button>
+            </div>
+            <div class="container-button">
+              <div><span>sin⁻¹</span><span>D</span></div>
+              <button class="button-medio button" value="sin">sin</button>
+            </div>
+            <div class="container-button">
+              <div><span>cos⁻¹</span><span>F</span></div>
+              <button class="button-medio button" value="cos">cos</button>
+            </div>
+            <div class="container-button">
+              <div><span>tan⁻¹</span><span>F</span></div>
+              <button class="button-medio button" value="tan">tan</button>
+            </div>
+            <div class="container-button">
+              <div><span>STO</span></div>
+              <button class="button-medio button" value="rcl">rcl</button>
+            </div>
+            <div class="container-button">
+              <div><span>←</span></div>
+              <button class="button-medio button" value="ENG">ENG</button>
+            </div>
+            <div class="container-button">
+              <button class="button-medio button" value="(">(</button>
+            </div>
+            <div class="container-button">
+              <div><span></span><span>X</span></div>
+              <button class="button-medio button" value=")">)</button>
+            </div>
+            <div class="container-button">
+              <div><span>;</span><span>Y</span></div>
+              <button class="button-medio button" value=",">,</button>
+            </div>
+            <div class="container-button">
+              <div><span>M-</span><span>M</span></div>
+              <button class="button-medio button" value="M+">M+</button>
+            </div>
+            <div class="container-button">
+              <button class="button" value="7">7</button>
+            </div>
+            <div class="container-button">
+              <button class="button" value="8">8</button>
+            </div>
+            <div class="container-button">
+              <button class="button" value="9">9</button>
+            </div>
+            <div class="container-button">
+              <div><span>INS</span></div>
+              <button class="button" value="del">DEL</button>
+            </div>
+            <div class="container-button">
+              <div><span>OFF</span><span></span></div>
+              <button class="button" value="ac">AC</button>
+            </div>
+            <div class="container-button">
+              <button class="button" value="4">4</button>
+            </div>
+            <div class="container-button">
+              <button class="button" value="5">5</button>
+            </div>
+            <div class="container-button">
+              <button class="button" value="6">6</button>
+            </div>
+            <div class="container-button">
+              <button class="button" value="x">x</button>
+            </div>
+            <div class="container-button">
+              <button class="button" value="/">/</button>
+            </div>
+            <div class="container-button">
+              <div><span>S-SUM</span></div>
+              <button class="button" value="1">1</button>
+            </div>
+            <div class="container-button">
+              <div><span>S-var</span></div>
+              <button class="button" value="2">2</button>
+            </div>
+            <div class="container-button">
+              <button class="button" value="3">3</button>
+            </div>
+            <div class="container-button">
+              <button class="button" value="+">＋</button>
+            </div>
+            <div class="container-button">
+              <button class="button" value="-">-</button>
+            </div>
+            <div class="container-button">
+              <div><span>Rnd</span></div>
+              <button class="button" value="0">0</button>
+            </div>
+            <div class="container-button">
+              <div><span>Ran#</span></div>
+              <button class="button" value=".">.</button>
+            </div>
+            <div class="container-button">
+              <div><span>π</span></div>
+              <button class="button" value="EXP">EXP</button>
+            </div>
+            <div class="container-button">
+              <div><span>DRG▸</span></div>
+              <button class="button" value="Ans">Ans</button>
+            </div>
+            <div class="container-button">
+              <div><span>%</span></div>
+              <button class="button" value="=">=</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>
+        Creador Rodrigo Milesi - 
+        <a href="mailto:rmilesi009@gmail.com" alt="gmail">gmail</a> - 
+        <a href="./LICENSE.html" alt="license">MIT License</a>
+    </p>
+    </footer>
+    <script src="generalVar.js"></script>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
